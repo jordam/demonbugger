@@ -75,7 +75,6 @@ def parseping(packet, ptype, args):
         if args.v > 1:
                 bs += 'PAYLOAD: ' + str(packet.data)[28:].encode('hex') + ' '
 	if bs != ptype + " ":
-		print bs
 		sid = pdat[3:13].encode('hex')
 		sintip = socket.inet_ntoa(pdat[17:21])
 		textip = socket.inet_ntoa(pdat[23:27])
@@ -97,7 +96,7 @@ def main(args=None):
     if args is None:
         args = sys.argv
 
-    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser = argparse.ArgumentParser(description='Sniff the demonware protocol and display information.')
     parser.add_argument("-p", dest="port", default="3074",
 		      help="Sniffing Port")
     parser.add_argument("-v",
