@@ -11,4 +11,4 @@ Licence Free 2013 by jordam@github
 
 Please submit additions / upgrades as pull requests so I may pull them into the main repo!
 
-This script is made for debian based linux systems and requires pypcap
+This script is made for debian based linux systems and requires pypcap and dpkt
