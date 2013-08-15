@@ -97,6 +97,7 @@ def main(args=None):
         args = sys.argv
 
     parser = argparse.ArgumentParser(description='Sniff the demonware protocol and display information.')
+    parser.add_argument('--version', action='version', version='%(prog)s ((v1.3) 8-15-13)')
     parser.add_argument("-p", dest="port", default="3074",
 		      help="Sniffing Port")
     parser.add_argument("-v",
